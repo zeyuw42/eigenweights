@@ -2,7 +2,10 @@
 
 Exact SageMath computations for Section 5 of *Arithmetic Volume of Shtukas
 and Langlands Duality* by Zeyu Wang and Wenqing Wei. Equation and table
-references in the code refer to the included [main.pdf](main.pdf).
+references in the code refer to this paper:
+
+- [arXiv:2604.03763](https://arxiv.org/abs/2604.03763)
+- [Backup PDF on Zeyu Wang's homepage](https://zeyuw42.github.io/assets/volumeofshtukas.pdf)
 
 ## Two versions
 
@@ -40,12 +43,13 @@ representations, particularly E8, may take a few minutes.
 To save every comparison:
 
 ```sh
-sage -python verify_section5.py --paper main.pdf --report results/verification.txt
+sage -python verify_section5.py --report results/verification.txt
 sage -python old/compute_section5.py --report results/tables.txt
 ```
 
-The optional `--paper` argument records the manuscript's SHA-256 hash in
-the verification report; it does not extract formulas from the PDF.
+If you download the paper, you can optionally add `--paper /path/to/paper.pdf`
+to record its SHA-256 hash in the verification report. The scripts run
+without a local PDF.
 
 ## Individual calculations
 
